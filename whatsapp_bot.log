@@ -15,3 +15,11 @@
 2025-09-18 00:07:27,879 - backend.main - INFO - Loading tokenizer...
 2025-09-18 00:07:28,985 - backend.main - INFO - Loading model on device: cuda
 2025-09-18 00:07:30,665 - backend.main - INFO - Model loaded successfully! Available labels: ['disease', 'drug', 'other', 'treatment', 'treatment plan']
+2025-09-18 00:09:07,132 - backend.main - INFO - Received from whatsapp:+917200288242: 'hi'
+2025-09-18 00:09:08,399 - backend.main - INFO - Sent to whatsapp:+917200288242: Intent=disease, Confidence=0.218
+2025-09-18 00:09:20,629 - backend.main - INFO - Received from whatsapp:+917200288242: 'hello'
+2025-09-18 00:09:21,603 - backend.main - INFO - User whatsapp:+917200288242: 'hello' -> Intent: disease (confidence: 0.549, medical: False)
+2025-09-18 00:09:21,603 - backend.main - INFO - Sent to whatsapp:+917200288242: Intent=disease, Confidence=0.549
+2025-09-18 00:09:34,701 - backend.main - INFO - Received from whatsapp:+917200288242: 'what is nystatin prescribed for?'
+2025-09-18 00:09:35,675 - backend.main - INFO - Medical query detected: medication_inquiry for user whatsapp:+917200288242
+2025-09-18 00:09:35,675 - backend.main - INFO - Sent to whatsapp:+917200288242: Intent=drug, Confidence=0.820
