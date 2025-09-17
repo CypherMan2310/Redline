@@ -1,0 +1,140 @@
+=== CLASS BALANCE ANALYSIS ===
+Class distribution:
+  disease: 294 samples (28.7%)
+  drug: 325 samples (31.7%)
+  other: 233 samples (22.7%)
+  treatment: 46 samples (4.5%)
+  treatment plan: 127 samples (12.4%)
+
+⚠️ Underrepresented classes (< 100 samples):
+  treatment: 46 samples
+
+=== COMPUTING CLASS WEIGHTS ===
+Class weights (to handle imbalance):
+  disease: 0.697
+  drug: 0.631
+  other: 0.880
+  treatment: 4.457
+  treatment plan: 1.614
+
+=== DATA AUGMENTATION ===
+Map: 100%
+ 1025/1025 [00:00<00:00, 10218.48 examples/s]
+Map: 100%
+ 353/353 [00:00<00:00, 6958.54 examples/s]
+
+🚀 Starting enhanced training with class balance handling...
+ [325/325 00:24, Epoch 5/5]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	F1 Macro	F1 Micro	Precision	Recall	F1 Disease	Precision Disease	Recall Disease	F1 Drug	Precision Drug	Recall Drug	F1 Other	Precision Other	Recall Other	F1 Treatment	Precision Treatment	Recall Treatment	F1 Treatment Plan	Precision Treatment Plan	Recall Treatment Plan
+1	1.449400	1.355499	0.606232	0.579458	0.470274	0.606232	0.585702	0.606232	0.600823	0.510490	0.730000	0.829493	0.818182	0.841121	0.421053	0.595745	0.325581	0.000000	0.000000	0.000000	0.500000	0.433962	0.589744
+2	1.298700	1.239870	0.674221	0.640538	0.500325	0.674221	0.637062	0.674221	0.708661	0.584416	0.900000	0.857143	0.845455	0.869159	0.575163	0.656716	0.511628	0.000000	0.000000	0.000000	0.360656	0.500000	0.282051
+3	1.124800	1.057081	0.699717	0.694545	0.555681	0.699717	0.708044	0.699717	0.751269	0.762887	0.740000	0.859903	0.890000	0.831776	0.691824	0.753425	0.639535	0.000000	0.000000	0.000000	0.475410	0.349398	0.743590
+4	0.760700	1.054319	0.696884	0.687122	0.566335	0.696884	0.710691	0.696884	0.697143	0.813333	0.610000	0.876106	0.831933	0.925234	0.670588	0.678571	0.662791	0.083333	0.333333	0.047619	0.504505	0.388889	0.717949
+5	0.666200	1.014778	0.719547	0.701178	0.573831	0.719547	0.690523	0.719547	0.736842	0.777778	0.700000	0.869955	0.836207	0.906542	0.670520	0.666667	0.674419	0.000000	0.000000	0.000000	0.591837	0.491525	0.743590
+
+=== ENHANCED EVALUATION ===
+Overall Metrics:
+  eval_loss: 0.9824
+  eval_accuracy: 0.7195
+  eval_f1: 0.7012
+  eval_f1_macro: 0.5738
+  eval_f1_micro: 0.7195
+  eval_precision: 0.6905
+  eval_recall: 0.7195
+  eval_f1_disease: 0.7368
+  eval_precision_disease: 0.7778
+  eval_recall_disease: 0.7000
+  eval_f1_drug: 0.8700
+  eval_precision_drug: 0.8362
+  eval_recall_drug: 0.9065
+  eval_f1_other: 0.6705
+  eval_precision_other: 0.6667
+  eval_recall_other: 0.6744
+  eval_f1_treatment: 0.0000
+  eval_precision_treatment: 0.0000
+  eval_recall_treatment: 0.0000
+  eval_f1_treatment_plan: 0.5918
+  eval_precision_treatment_plan: 0.4915
+  eval_recall_treatment_plan: 0.7436
+  eval_runtime: 0.5371
+  eval_samples_per_second: 657.2180
+  eval_steps_per_second: 42.8220
+  epoch: 5.0000
+
+Per-Class Performance:
+  disease:
+    F1: 0.737, Precision: 0.778, Recall: 0.700
+  drug:
+    F1: 0.870, Precision: 0.836, Recall: 0.907
+  other:
+    F1: 0.671, Precision: 0.667, Recall: 0.674
+  treatment:
+    F1: 0.000, Precision: 0.000, Recall: 0.000
+  treatment plan:
+    F1: 0.592, Precision: 0.492, Recall: 0.744
+
+=== ERROR ANALYSIS ===
+Misclassification Analysis:
+
+disease:
+  Samples: 100, Correct: 70
+  Class Accuracy: 0.700
+  Most confused with:
+    drug: 6 times
+    other: 17 times
+    treatment plan: 7 times
+
+drug:
+  Samples: 107, Correct: 97
+  Class Accuracy: 0.907
+  Most confused with:
+    disease: 4 times
+    other: 5 times
+    treatment plan: 1 times
+
+other:
+  Samples: 86, Correct: 58
+  Class Accuracy: 0.674
+  Most confused with:
+    disease: 14 times
+    drug: 5 times
+    treatment: 1 times
+    treatment plan: 8 times
+
+treatment:
+  Samples: 21, Correct: 0
+  Class Accuracy: 0.000
+  Most confused with:
+    disease: 1 times
+    drug: 3 times
+    other: 3 times
+    treatment plan: 14 times
+
+treatment plan:
+  Samples: 39, Correct: 29
+  Class Accuracy: 0.744
+  Most confused with:
+    disease: 1 times
+    drug: 5 times
+    other: 4 times
+
+=== CONFIDENCE ANALYSIS ===
+Overall confidence statistics:
+  Mean: 0.668
+  Median: 0.711
+  Min: 0.270
+  Max: 0.900
+Correct predictions confidence: 0.713
+Incorrect predictions confidence: 0.553
+
+
+✅ Enhanced training completed!
+📈 Improvement Summary:
+  Macro F1: 0.5738 (target: >0.5 for balanced performance)
+  Weighted F1: 0.7012
+  Overall Accuracy: 0.7195
+('/content/drive/MyDrive/fine_tuned_indicbert/tokenizer_config.json',
+ '/content/drive/MyDrive/fine_tuned_indicbert/special_tokens_map.json',
+ '/content/drive/MyDrive/fine_tuned_indicbert/spiece.model',
+ '/content/drive/MyDrive/fine_tuned_indicbert/added_tokens.json',
+ '/content/drive/MyDrive/fine_tuned_indicbert/tokenizer.json')

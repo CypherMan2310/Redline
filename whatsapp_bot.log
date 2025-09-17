@@ -1,0 +1,17 @@
+2025-09-18 00:00:00,132 - backend.main - INFO - Starting FastAPI WhatsApp Bot...
+2025-09-18 00:00:00,133 - backend.main - INFO - Loading model from C:/Users/somas/PycharmProjects/Redline/model/fine_tuned_indicbert
+2025-09-18 00:00:00,133 - backend.main - INFO - Loading tokenizer...
+2025-09-18 00:00:01,267 - backend.main - INFO - Loading model on device: cuda
+2025-09-18 00:00:02,946 - backend.main - INFO - Model loaded successfully! Available labels: ['disease', 'drug', 'other', 'treatment', 'treatment plan']
+2025-09-18 00:00:02,947 - backend.main - INFO - Bot started successfully!
+2025-09-18 00:00:41,564 - backend.main - INFO - Received message from whatsapp:+917200288242: 'hi'
+2025-09-18 00:00:42,115 - backend.main - INFO - User whatsapp:+917200288242: 'hi' -> Intent: disease (confidence: 0.218) -> Response generated
+2025-09-18 00:00:42,115 - backend.main - INFO - Response sent to whatsapp:+917200288242: Intent=disease, Confidence=0.218
+2025-09-18 00:00:54,173 - backend.main - INFO - Received message from whatsapp:+917200288242: 'what is nystatin prescribed for?'
+2025-09-18 00:00:54,355 - backend.main - INFO - User whatsapp:+917200288242: 'what is nystatin prescribed for?' -> Intent: drug (confidence: 0.820) -> Response generated
+2025-09-18 00:00:54,355 - backend.main - INFO - Response sent to whatsapp:+917200288242: Intent=drug, Confidence=0.820
+2025-09-18 00:07:27,878 - backend.main - INFO - Starting Enhanced WhatsApp Medical Bot...
+2025-09-18 00:07:27,878 - backend.main - INFO - Loading model from C:/Users/somas/PycharmProjects/Redline/model/fine_tuned_indicbert
+2025-09-18 00:07:27,879 - backend.main - INFO - Loading tokenizer...
+2025-09-18 00:07:28,985 - backend.main - INFO - Loading model on device: cuda
+2025-09-18 00:07:30,665 - backend.main - INFO - Model loaded successfully! Available labels: ['disease', 'drug', 'other', 'treatment', 'treatment plan']
